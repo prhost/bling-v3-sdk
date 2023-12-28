@@ -1,0 +1,15 @@
+.idea
+.php_cs
+.php_cs.cache
+.phpunit.result.cache
+build
+coverage
+docs
+psalm.xml
+vendor
+.php-cs-fixer.cache
+.DS_Store
+tests/_output
+tests/_support/_generated
+.env
+.run

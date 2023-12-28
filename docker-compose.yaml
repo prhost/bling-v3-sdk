@@ -1,0 +1,17 @@
+version: '3.9'
+services:
+
+  #Configurações Webserver
+  webserver:
+    image: webdevops/php-dev:8.2
+    working_dir: /app
+    volumes:
+      - ./:/app
+    environment:
+      PHP_DEBUGGER: "xdebug"
+      XDEBUG_START_WITH_REQUEST: 1
+      XDEBUG_DISCOVER_CLIENT_HOST: 1
+      XDEBUG_CLIENT_HOST: "host.docker.internal"
+      XDEBUG_CLIENT_PORT: 9000
+      XDEBUG_IDE_KEY: PHPSTORM
+      PHP_IDE_CONFIG: "serverName=webserver.sdk.orb.local"
