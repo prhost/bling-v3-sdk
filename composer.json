@@ -33,7 +33,7 @@
     },
     "autoload": {
         "psr-4": {
-            "Bling\\": "src/",
+            "Prhost\\Bling\\": "src/",
             "Tests\\": "tests/"
         }
     }
