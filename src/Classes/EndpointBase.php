@@ -1,6 +1,6 @@
 <?php
 
-namespace Bling\Classes;
+namespace Prhost\Bling\Classes;
 
 
 use Mitryusweb\Api\Mitryusweb;

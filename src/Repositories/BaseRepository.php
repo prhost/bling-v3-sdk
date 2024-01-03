@@ -1,8 +1,8 @@
 <?php
 
-namespace Bling\Repositories;
+namespace Prhost\Bling\Repositories;
 
-use Bling\Client\ApiClient;
+use Prhost\Bling\Client\ApiClient;
 
 class BaseRepository
 {

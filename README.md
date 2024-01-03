@@ -19,8 +19,11 @@ composer require prhost/bling-v3-sdk
 ### Solicitar autorização
 
 ```php
+
+use Prhost\Bling\Bling;
+
 // Instancia o objeto
-$bling = new Bling\Bling(
+$bling = new Bling(
     "CLIENT ID",
     "SECRET KEY",
 );

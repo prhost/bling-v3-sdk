@@ -1,8 +1,8 @@
 <?php
 
-namespace Bling\Repositories;
+namespace Prhost\Bling\Repositories;
 
-use Bling\Classes\Collection;
+use Prhost\Bling\Classes\Collection;
 
 class Produtos extends BaseRepository
 {

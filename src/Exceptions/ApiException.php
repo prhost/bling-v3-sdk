@@ -1,9 +1,9 @@
 <?php
 
-namespace Bling\Exceptions;
+namespace Prhost\Bling\Exceptions;
 
 use \Exception;
-use Bling\Client\Response;
+use Prhost\Bling\Client\Response;
 
 class ApiException extends Exception
 {

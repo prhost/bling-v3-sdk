@@ -3,7 +3,7 @@
 namespace Tests\Unit;
 
 use Faker\Factory;
-use Bling\Bling;
+use Prhost\Bling\Bling;
 use PHPUnit\Framework\TestCase;
 
 class TestCaseBase extends \Codeception\Test\Unit
