@@ -85,4 +85,9 @@ class Bling extends EndpointBase
     {
         return new Repositories\Produtos($this->getApiClient());
     }
+
+    public function pedidosVendas(): Repositories\PedidosVendas
+    {
+        return new Repositories\PedidosVendas($this->getApiClient());
+    }
 }

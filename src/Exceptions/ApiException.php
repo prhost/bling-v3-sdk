@@ -41,7 +41,10 @@ class ApiException extends Exception
         if ($responseContent && property_exists($responseContent, 'error') && $responseContent->error) {
             $fields = $responseContent->error->fields ?? [];
             foreach ($fields as $field) {
-                $this->fields[$field->element] = $field->msg;
+                $this->fields[$field->element] = [
+                    'message'    => $field->msg,
+                    'collection' => $field->collection ?? null,
+                ];
             }
         }
     }
@@ -62,9 +65,10 @@ class ApiException extends Exception
 
     public function getFieldsErrorsMessage(): ?string
     {
-        $fieldsResult = '';
-        foreach ($this->fields as $field => $message) {
-            $fieldsResult .= $field . ': ' . $message;
+        $fieldsResult = ' ';
+
+        foreach ($this->fields as $field => $data) {
+            $fieldsResult .= $field . ': ' . $data['message'] . ';' . PHP_EOL;
         }
 
         return $fieldsResult;
