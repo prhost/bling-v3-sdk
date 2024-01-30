@@ -90,4 +90,9 @@ class Bling extends EndpointBase
     {
         return new Repositories\PedidosVendas($this->getApiClient());
     }
+
+    public function nfce(): Repositories\Nfce
+    {
+        return new Repositories\Nfce($this->getApiClient());
+    }
 }
