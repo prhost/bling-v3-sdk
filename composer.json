@@ -36,5 +36,8 @@
             "Prhost\\Bling\\": "src/",
             "Tests\\": "tests/"
         }
+    },
+    "scripts": {
+        "test": "php vendor/bin/codecept run"
     }
 }
