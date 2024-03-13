@@ -4,10 +4,12 @@ namespace Prhost\Bling\Repositories;
 
 use Prhost\Bling\Repositories\Traits\CrudRepository;
 
-class ProdutosCategorias extends BaseRepository
+class Contatos extends BaseRepository
 {
     use CrudRepository;
 
-    protected $uri = 'categorias/produtos';
+    protected $uri = 'contatos';
+
+    protected $queryParam = 'idsContatos';
 
 }
