@@ -26,8 +26,6 @@ trait CrudRepository
     {
         $response = $this->request('GET', rtrim($this->uri, '/') . '/' . $id)->getResponse();
 
-        debug($response);
-
         return $response->data ?? null;
     }
 
