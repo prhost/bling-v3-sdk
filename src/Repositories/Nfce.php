@@ -2,8 +2,6 @@
 
 namespace Prhost\Bling\Repositories;
 
-use Prhost\Bling\Classes\Collection;
-
 class Nfce extends BaseRepository
 {
     protected $uri = 'nfce';

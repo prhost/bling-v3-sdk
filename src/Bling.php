@@ -95,4 +95,24 @@ class Bling extends EndpointBase
     {
         return new Repositories\Nfce($this->getApiClient());
     }
+
+    public function estoques(): Repositories\Estoques
+    {
+        return new Repositories\Estoques($this->getApiClient());
+    }
+
+    public function produtosCategorias(): Repositories\ProdutosCategorias
+    {
+        return new Repositories\ProdutosCategorias($this->getApiClient());
+    }
+
+    public function contatos(): Repositories\Contatos
+    {
+        return new Repositories\Contatos($this->getApiClient());
+    }
+
+    public function depositos(): Repositories\Depositos
+    {
+        return new Repositories\Depositos($this->getApiClient());
+    }
 }
