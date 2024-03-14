@@ -135,6 +135,8 @@ php vendor/bin/codecept run
 
 ## Lista de rotas
 
+- [X] - Contatos
+- [X] - Depositos
 - [X] - Produtos
 - [X] - Produtos Categorias
 - [X] - Estoques
