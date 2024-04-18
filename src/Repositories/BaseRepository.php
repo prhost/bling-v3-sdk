@@ -2,7 +2,6 @@
 
 namespace Prhost\Bling\Repositories;
 
-use Prhost\Bling\Classes\Collection;
 use Prhost\Bling\Client\ApiClient;
 
 abstract class BaseRepository

@@ -2,16 +2,20 @@
 
 namespace Prhost\Bling\Repositories\Traits;
 
+use Prhost\Bling\Classes\Collection;
+
 trait CrudRepository
 {
     public function get(int $pagina = 1, int $limite = 100, array $filtros = []): Collection
     {
-        $response = $this->request('GET', $this->uri,
+        $response = $this->request(
+            'GET',
+            $this->uri,
             [
                 'query' => [
-                        'pagina' => $pagina,
-                        'limite' => $limite,
-                    ] + $filtros
+                    'pagina' => $pagina,
+                    'limite' => $limite,
+                ] + $filtros
             ]
         )->getResponse();
 

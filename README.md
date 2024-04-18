@@ -133,6 +133,16 @@ Para rodar os testes, baixe as dependências de desenvolvimento e execute:
 php vendor/bin/codecept run
 ```
 
+## Lista de rotas
+
+- [X] - Contatos
+- [X] - Depositos
+- [X] - Produtos
+- [X] - Produtos Categorias
+- [X] - Estoques
+- [X] - Pedidos Vendas
+- [X] - Nfce
+
 ## Créditos
 
 - [Kallef Alexandre](https://github.com/prhost)
