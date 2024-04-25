@@ -72,10 +72,10 @@ $bling->setAccessToken("Access Token");
 
 ```php
 //Retorna um array com todos os produtos
-$bling->products()->get();
+$bling->produtos()->get();
 
 //Retorna um array com todos os produtos na pagina 2 com 10 itens por pagina
-$bling->products()->get(2, 10);
+$bling->produtos()->get(2, 10);
 ```
 
 ### Criando um produto
