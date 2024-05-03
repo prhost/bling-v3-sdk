@@ -130,4 +130,9 @@ class Bling extends EndpointBase
     {
         return new Repositories\SituacoesModulos($this->getApiClient());
     }
+
+    public function formasPagamentos(): Repositories\FormasPagamentos
+    {
+        return new Repositories\FormasPagamentos($this->getApiClient());
+    }
 }
