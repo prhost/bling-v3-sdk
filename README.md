@@ -142,6 +142,7 @@ php vendor/bin/codecept run
 - [X] - Estoques
 - [X] - Pedidos Vendas
 - [X] - Nfce
+- [X] - Formas de Pagamentos
 
 ## Créditos
 
