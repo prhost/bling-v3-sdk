@@ -3,7 +3,7 @@
 namespace Prhost\Bling\Classes;
 
 
-class Collection
+class Collection implements \IteratorAggregate
 {
     protected $items = [];
 
@@ -69,5 +69,47 @@ class Collection
     public function map(callable $callback)
     {
         return array_map($callback, $this->items);
+    }
+
+    public function where($key, $value)
+    {
+        return new static(array_filter($this->items, function ($item) use ($key, $value) {
+            return $item->{$key} == $value;
+        }));
+    }
+
+    public function __iterable()
+    {
+        return $this->items;
+    }
+
+    public function getIterator()
+    {
+        return new \ArrayIterator($this->items);
+    }
+
+    public function __toString()
+    {
+        return json_encode($this->items);
+    }
+
+    public function __debugInfo()
+    {
+        return $this->items;
+    }
+
+    public function __isset($name)
+    {
+        return isset($this->items[$name]);
+    }
+
+    public function __set($name, $value)
+    {
+        $this->items[$name] = $value;
+    }
+
+    public function __unset($name)
+    {
+        unset($this->items[$name]);
     }
 }

@@ -74,9 +74,7 @@ class Bling extends EndpointBase
             $payload["code"] = $code;
         }
 
-        $this->getApiClient();
-
-        $response = $this->request("POST", "oauth/token", ['form_params' => $payload])->getResponse();
+        $response = $this->getApiClient()->request("POST", "oauth/token", ['json' => $payload])->getResponse();
 
         return $response;
     }
@@ -84,6 +82,11 @@ class Bling extends EndpointBase
     public function produtos(): Repositories\Produtos
     {
         return new Repositories\Produtos($this->getApiClient());
+    }
+
+    public function categoriasProdutos(): Repositories\CategoriasProdutos
+    {
+        return new Repositories\CategoriasProdutos($this->getApiClient());
     }
 
     public function pedidosVendas(): Repositories\PedidosVendas
