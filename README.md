@@ -135,14 +135,14 @@ php vendor/bin/codecept run
 
 ## Lista de rotas
 
+- [X] - Categorias - Produtos
 - [X] - Contatos
 - [X] - Depositos
-- [X] - Produtos
-- [X] - Produtos Categorias
-- [X] - Estoques
-- [X] - Pedidos Vendas
-- [X] - Nfce
 - [X] - Formas de Pagamentos
+- [X] - Estoques
+- [X] - Notas Fiscais de Consumidor Eletrônicas
+- [X] - Pedidos - Vendas
+- [X] - Produtos
 
 ## Créditos
 
