@@ -12,4 +12,15 @@ class Estoques extends BaseRepository
 
     protected $queryParam = 'idsProdutos';
 
+    public function saldos(array $produtos): array
+    {
+        $response = $this->request('GET', rtrim($this->uri, '/') . '/saldos', [
+            'query' => [
+                'idsProdutos' => $produtos
+            ]
+        ])->getResponse();
+
+        return $response->estoques ?? [];
+    }
+
 }
