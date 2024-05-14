@@ -137,6 +137,7 @@ php vendor/bin/codecept run
 
 - [X] - Categorias - Produtos
 - [X] - Contatos
+- [X] - Contatos - Tipos
 - [X] - Depositos
 - [X] - Formas de Pagamentos
 - [X] - Estoques
