@@ -41,6 +41,9 @@ class ApiException extends Exception
         if ($responseContent && property_exists($responseContent, 'error') && $responseContent->error) {
             $fields = $responseContent->error->fields ?? [];
             foreach ($fields as $field) {
+                if (is_array($field)) {
+                    $field = current($field);
+                }
                 $this->fields[$field->element] = [
                     'message'    => $field->msg,
                     'collection' => $field->collection ?? null,
