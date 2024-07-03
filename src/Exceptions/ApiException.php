@@ -22,6 +22,8 @@ class ApiException extends Exception
         $message = $this->prepareMessage($message);
         $this->prepareFields();
 
+        $message = trim($message . ' ' . $this->getFieldsErrorsMessage());
+
         parent::__construct($message, $response ? $response->getStatusCode() : $code);
     }
 
@@ -40,13 +42,14 @@ class ApiException extends Exception
         $responseContent = $this->response?->getResponse();
         if ($responseContent && property_exists($responseContent, 'error') && $responseContent->error) {
             $fields = $responseContent->error->fields ?? [];
-            foreach ($fields as $field) {
+            foreach ($fields as $key => $field) {
                 if (is_array($field)) {
                     $field = current($field);
                 }
-                $this->fields[$field->element] = [
+                $this->fields[$key] = [
                     'message'    => $field->msg,
                     'collection' => $field->collection ?? null,
+                    'element'    => $field->element ?? '',
                 ];
             }
         }
@@ -70,8 +73,8 @@ class ApiException extends Exception
     {
         $fieldsResult = ' ';
 
-        foreach ($this->fields as $field => $data) {
-            $fieldsResult .= $field . ': ' . $data['message'] . ';' . PHP_EOL;
+        foreach ($this->fields as $data) {
+            $fieldsResult .= $data['element'] . ': ' . $data['message'] . ';' . PHP_EOL;
         }
 
         return $fieldsResult;
