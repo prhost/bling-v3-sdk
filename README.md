@@ -143,6 +143,8 @@ php vendor/bin/codecept run
 - [X] - Estoques
 - [X] - Notas Fiscais de Consumidor Eletrônicas
 - [X] - Pedidos - Vendas
+- [X] - Situações
+- [X] - Situações Módulos
 - [X] - Produtos
 
 ## Créditos

@@ -19,4 +19,9 @@ class PedidosVendas extends BaseRepository
     {
         return $this->request('POST', $this->uri . '/' . $pedidoId . '/lancar-estoque')->getResponse();
     }
+
+    public function alterarSituacao($pedidoId, $situacaoId)
+    {
+        return $this->request('PATCH', $this->uri . '/' . $pedidoId . '/situacoes/' . $situacaoId)->getResponse();
+    }
 }
