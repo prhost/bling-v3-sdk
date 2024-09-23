@@ -20,7 +20,7 @@ class Estoques extends BaseRepository
             ]
         ])->getResponse();
 
-        return $response->estoques ?? [];
+        return $response->estoques ?? $response->data ?? [];
     }
 
 }
