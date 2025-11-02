@@ -17,7 +17,9 @@ class Response extends \GuzzleHttp\Psr7\Response
         }
 
         if ($this->contents) {
-            $response = json_decode($this->contents);
+            // JSON_BIGINT_AS_STRING: Converte integers grandes (> PHP_INT_MAX) para string
+            // Evita overflow em sistemas 32-bit onde PHP_INT_MAX = 2^31 - 1 (2.147.483.647)
+            $response = json_decode($this->contents, false, 512, JSON_BIGINT_AS_STRING);
         } else {
             $response = [$this->contents];
         }
