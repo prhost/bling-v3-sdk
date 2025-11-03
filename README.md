@@ -1,6 +1,5 @@
 # Bling v3 SDK
 
-[![Latest Version on Packagist](https://img.shields.io/packagist/v/prhost/bling-v3-sdk.svg?style=flat-square)](https://packagist.org/packages/prhost/bling-v3-sdk)
 [![Total Downloads](https://img.shields.io/packagist/dt/prhost/bling-v3-sdk.svg?style=flat-square)](https://packagist.org/packages/prhost/bling-v3-sdk)
 
 ---
