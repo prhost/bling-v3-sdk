@@ -63,4 +63,34 @@ class ApiClient extends Client
             );
         }
     }
+
+    /**
+     * Retorna o access token atual do cliente
+     * 
+     * @return string
+     */
+    public function getAccessToken(): string
+    {
+        return $this->accessToken ?? '';
+    }
+
+    /**
+     * Retorna o client ID
+     * 
+     * @return string
+     */
+    public function getClientId(): string
+    {
+        return $this->clientId ?? '';
+    }
+
+    /**
+     * Retorna o secret key
+     * 
+     * @return string
+     */
+    public function getSecretKey(): string
+    {
+        return $this->secretKey ?? '';
+    }
 }

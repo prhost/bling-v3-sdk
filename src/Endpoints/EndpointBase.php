@@ -26,6 +26,22 @@ abstract class EndpointBase
 
     protected function getApiClient()
     {
+        // Reutilizar ApiClient existente se já foi criado e configurações não mudaram
+        if ($this->apiClient) {
+            // Verificar se access_token mudou e precisa recriar o cliente
+            if ($this->apiClient->getAccessToken() !== $this->accessToken) {
+                // Token mudou, recriar cliente com novo token
+                $this->apiClient = new ApiClient([
+                    'client_id'   => $this->clientId,
+                    'secret_key'  => $this->secretKey,
+                    'access_token' => $this->accessToken,
+                    'base_uri'    => $this->getBaseUri(),
+                ]);
+            }
+            return $this->apiClient;
+        }
+
+        // Criar novo ApiClient na primeira vez
         $this->apiClient = new ApiClient([
             'client_id'   => $this->clientId,
             'secret_key'  => $this->secretKey,
