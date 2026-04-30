@@ -22,7 +22,7 @@ abstract class EndpointBase
 
     protected $state;
 
-    protected $urlApi = 'https://www.bling.com.br/Api/v3';
+    protected $urlApi = 'https://api.bling.com.br/Api/v3';
 
     protected function getApiClient()
     {
