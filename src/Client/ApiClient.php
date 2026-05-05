@@ -39,6 +39,7 @@ class ApiClient extends Client
         $config['headers'] = [
             'Accept'       => 'application/json',
             'Content-Type' => 'application/json',
+            'enable-jwt'   => '1',
         ];
 
         if ($this->accessToken) {
